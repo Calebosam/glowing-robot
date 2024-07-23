@@ -10,8 +10,7 @@ function App() {
       .get("https://jsonplaceholder.typicode.com/todos/1")
       .then((res) => {
         console.log(res.data.idd.somthing);
-      })
-      .catch((err) => console.log(err));
+      });
 
     setStatus("Type Error occured");
   };
