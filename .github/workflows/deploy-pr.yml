@@ -35,3 +35,8 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Show URL if check passes
+        if: success()
+        run: |
+          echo "PR deployed! Visit the following URL: https://glowing-robot.s3.eu-west-1.amazonaws.com/pr-${{ github.event.number }}/index.html"
