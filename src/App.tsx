@@ -6,11 +6,9 @@ function App() {
   const [status, setStatus] = useState("No Error occured");
 
   const handleTypeError = () => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/todos/1")
-      .then((res) => {
-        console.log(res.data.idd.somthing);
-      });
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((res) => {
+      console.log(res.data.idd.somthing);
+    });
 
     setStatus("Type Error occured");
   };
