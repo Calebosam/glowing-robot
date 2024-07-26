@@ -23,7 +23,7 @@ jobs:
       - name: Add env
         run: |
           touch .env
-          echo "VITE_APP_BASE_PATH=pr-${{ github.event.number }}" >> .env
+          echo "VITE_APP_BASE_PATH=/pr-${{ github.event.number }}" >> .env
           cat .env
 
       - name: Build project
