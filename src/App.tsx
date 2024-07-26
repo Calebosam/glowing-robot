@@ -28,7 +28,7 @@ function App() {
   };
   return (
     <>
-      <h1>Glowing Robots</h1>
+      <h1>Glowing Robot</h1>
       <div className="card">
         <button style={{ marginRight: "5px" }} onClick={() => handleReset()}>
           Reset
