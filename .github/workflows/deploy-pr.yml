@@ -10,12 +10,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -23,8 +23,7 @@ jobs:
       - name: Add env
         run: |
           touch .env
-          echo "VITE_APP_BASE_PATH=pr-${{ github.event.number }}" >> .env
-          cat .env
+          echo "VITE_APP_BASE_PATH=/pr-${{ github.event.number }}" >> .env
 
       - name: Build project
         run: npm run build
