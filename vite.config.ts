@@ -32,5 +32,7 @@ export default defineConfig({
 
   build: {
     sourcemap: true,
+    outDir: "dist/pr-3"
   },
+  // base: 'pr3'
 });
